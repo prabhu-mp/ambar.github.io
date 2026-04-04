@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambar Solutions - Software Consulting & Development</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --amber: #F5A623;
+            --amber-d: #C07C0A;
+            --ink: #0D0D0D;
+            --chalk: #F7F3ED;
+            --mid: #2A2218;
+            --accent: #E84C1E;
+        }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #f9f9f9;
+            color: var(--ink);
+        }
+        .navbar-brand {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--amber) !important;
+        }
+        .tagline {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .carousel-item {
+            height: 400px;
+            background-color: var(--mid);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--chalk);
+        }
+        .card {
+            border: 1px solid rgba(245,166,35,0.18);
+            background: rgba(255,255,255,0.9);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-icon {
+            font-size: 2rem;
+            color: var(--amber);
+        }
+        .offers {
+            background: var(--amber);
+            color: var(--ink);
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .three-column {
+            padding: 3rem 0;
+        }
+        .three-column .col {
+            text-align: center;
+            padding: 1rem;
+        }
+        .three-column .num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: var(--amber);
+        }
+        footer {
+            background: var(--ink);
+            color: var(--chalk);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        @media (min-width: 992px) {
+            .main-content {
+                max-width: 60%;
+                margin: 0 auto;
+            }
+        }
+        #logo {
+            width: 200px;
+            height: 150px;
+            object-fit: contain;
+        }
+        @media (max-width: 991px) {
+            #logo {
+                width: 100px;
+                height: 75px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Section -->
+    <header class="container-fluid py-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="navbar-brand mb-0">Ambar Solutions</h1>
+                <p class="tagline mb-0">Software Consulting & Development</p>
+            </div>
+            <div class="col-md-6 text-end  d-none d-md-block">
+                <!-- Logo placeholder -->
+                <img id="logo" src="ambar_logo.svg" alt="Ambar Solutions Logo">
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#carousel">Highlights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why-us">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel Section -->
+    <section id="carousel" class="container-fluid p-0">
+        <div id="highlightsCarousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#highlightsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#highlightsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#highlightsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container text-center d-flex flex-column justify-content-center h-100">
+                        <h2>From Idea to Launch</h2>
+                        <p>Custom software solutions tailored for all businesses.</p>
+                        <p>We analyze your workflows and craft a clear roadmap.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="display: none;">
+                    <div class="container text-center d-flex flex-column justify-content-center h-100">
+                        <h2>AI-Powered Automation</h2>
+                        <p>Intelligent agents that streamline your workflows.</p>
+                        <p>Automate and optimize repetitive tasks and decision logic.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="display: none;">
+                    <div class="container text-center d-flex flex-column justify-content-center h-100">
+                        <h2>Transparent & Reliable</h2>
+                        <p>Full-cycle development with clear pricing and timelines.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#highlightsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#highlightsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <div class="main-content">
+    <!-- Cards Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+        <h2 class="text-center mb-4">Our Services</h2>
+        <div class="row">
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="card-icon mb-3">🔍</div>
+                        <h5 class="card-title">Collaborative Product Development</h5>
+                        <p class="card-text">Partner with us to co-create scalable digital products. We align with your business goals, leverage agile methodologies, and ensure rapid iteration from idea to production with high-quality engineering standards.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="card-icon mb-3">&#128187;</div>
+                        <h5 class="card-title">Web Design and Development Services</h5>
+                        <p class="card-text">We craft intuitive, user-centric designs that enhance engagement and brand identity. Our design approach focuses on usability, accessibility, and responsive layouts across all devices.</p>
+                        <p class="card-text">Transform legacy systems into modern, cloud-ready applications. Improve performance, scalability, and maintainability through re-architecture, containerization, and automation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="card-icon mb-3">🤖</div>
+                        <h5 class="card-title">AI & Agentic Automation</h5>
+                        <p class="card-text">Build smart systems that think and act. We deliver AI-powered automation and agentic solutions to streamline operations and scale intelligence across your business.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="card-icon mb-3">&#128722;</div>
+                        <h5 class="card-title">E-commerce Development</h5>
+                        <p class="card-text">Develop robust e-commerce platforms with seamless user experience, secure payment integration, and scalable backend systems to support growing business demands.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section id="offers" class="offers">
+        <div class="container">
+            <h2>Introductory Offer</h2>
+            <p>Get a free consultation for your next project!</p>
+            <p>Transparent pricing with clear cost breakdowns.</p>
+        </div>
+    </section>
+
+    <!-- 3 Column Section -->
+    <section id="why-us" class="three-column">
+        <div class="container">
+        <h2 class="text-center mb-4">Why Choose Us</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="num">01</div>
+                <p>Requirements to production — we own the full journey</p>
+            </div>
+            <div class="col-md-4">
+                <div class="num">02</div>
+                <p>Competitive, transparent pricing with clear comparisons</p>
+            </div>
+            <div class="col-md-4">
+                <div class="num">03</div>
+                <p>AI-first thinking baked into every solution we deliver</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <h3>Ready to transform your business?</h3>
+            <p>Let's build it together.</p>
+            <p><strong>Ambar Solutions</strong><br>
+            hello@ambarsolutions.com<br>
+            www.ambarsolutions.com<br>
+            +1 (000) 000-0000</p>
+        </div>
+    </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const carousel = document.getElementById('highlightsCarousel');
+        const items = carousel.querySelectorAll('.carousel-item');
+        const indicators = carousel.querySelectorAll('.carousel-indicators button');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            items.forEach((item, i) => {
+                item.style.display = i === index ? 'block' : 'none';
+                item.classList.toggle('active', i === index);
+            });
+            indicators.forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
+            });
+        }
+
+        document.querySelector('.carousel-control-next').addEventListener('click', () => {
+            if (currentIndex < items.length - 1) {
+                currentIndex++;
+                showSlide(currentIndex);
+            }
+        });
+
+        document.querySelector('.carousel-control-prev').addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showSlide(currentIndex);
+            }
+        });
+
+        indicators.forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                currentIndex = i;
+                showSlide(currentIndex);
+            });
+        });
+    </script>
+</body>
+</html>
